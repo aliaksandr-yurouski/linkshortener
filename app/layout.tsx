@@ -44,12 +44,12 @@ export default function RootLayout({
               </span>
               <div className="flex items-center gap-2">
                 <SignedOut>
-                  <SignInButton>
+                  <SignInButton mode="modal">
                     <Button variant="ghost" size="sm">
                       Sign in
                     </Button>
                   </SignInButton>
-                  <SignUpButton>
+                  <SignUpButton mode="modal">
                     <Button size="sm">Sign up</Button>
                   </SignUpButton>
                 </SignedOut>
