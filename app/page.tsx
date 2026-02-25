@@ -1,5 +1,5 @@
 import { SignInButton, SignUpButton, SignedIn, SignedOut } from "@clerk/nextjs";
-import { Link2, BarChart2, Pencil, LayoutDashboard } from "lucide-react";
+import { Link2, BarChart2, Pencil, LayoutDashboard, MousePointerClick, Sparkles, TrendingUp } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -37,6 +37,30 @@ const features = [
   },
 ];
 
+const steps = [
+  {
+    icon: Link2,
+    step: "1",
+    title: "Paste Your Link",
+    description:
+      "Copy any long URL and paste it into our shortener. Works with any web address.",
+  },
+  {
+    icon: Sparkles,
+    step: "2",
+    title: "Customize & Shorten",
+    description:
+      "Choose a custom slug or let us generate one for you. Click create and your short link is ready.",
+  },
+  {
+    icon: TrendingUp,
+    step: "3",
+    title: "Share & Track",
+    description:
+      "Share your short link anywhere. Monitor clicks and performance in real-time from your dashboard.",
+  },
+];
+
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center">
@@ -67,6 +91,32 @@ export default function HomePage() {
               <Link href="/dashboard">Go to Dashboard</Link>
             </Button>
           </SignedIn>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="w-full max-w-5xl px-4 pb-24">
+        <h2 className="mb-4 text-center text-2xl font-semibold tracking-tight">
+          How It Works
+        </h2>
+        <p className="mx-auto mb-10 max-w-2xl text-center text-muted-foreground">
+          Get started in three simple steps. No complex setup required.
+        </p>
+        <div className="grid gap-8 sm:grid-cols-3">
+          {steps.map(({ icon: Icon, step, title, description }) => (
+            <div key={step} className="flex flex-col items-center text-center">
+              <div className="relative mb-4">
+                <div className="flex size-16 items-center justify-center rounded-full bg-primary/10">
+                  <Icon className="size-8 text-primary" />
+                </div>
+                <div className="absolute -right-1 -top-1 flex size-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                  {step}
+                </div>
+              </div>
+              <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+              <p className="text-sm text-muted-foreground">{description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
