@@ -2,7 +2,7 @@
   "servers": {
     "neon": {
       "command": "npx",
-      "args": ["-y", "@neondatabase/mcp-server-neon", "start", "napi_5vbe6ikyuzk042q390wer4zvfhml6lqi5wmg0j3wupxs6nmeipn807aj8yye9rh5"]
+      "args": ["-y", "@neondatabase/mcp-server-neon", "start", "napi_gxnkh9xj85zsdev7n5un5c0eu7znqc9pu611m0n7tyw2wwlxqeub00ay4lnp05di"]
     }
   }
 }
