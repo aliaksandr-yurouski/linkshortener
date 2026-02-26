@@ -6,15 +6,6 @@ This file is the entry point for LLM coding agents working on this project. Read
 
 A URL shortening application built with Next.js 16 (App Router), TypeScript, Drizzle ORM on Neon PostgreSQL, styled with Tailwind CSS v4, and authenticated via Clerk.
 
-## Instruction Documents
-
-Detailed standards are split into focused documents inside the `docs/` folder. **Always consult the relevant document before writing code in that area.**
-
-| Document | Covers |
-|---|---|
-| [docs/authentication.md](docs/authentication.md) | Clerk-only auth, `/dashboard` protection, homepage redirect, modal sign-in/sign-up |
-| [docs/ui.md](docs/ui.md) | shadcn/ui-only components, adding components, form patterns, styling rules |
-
 ## Quick Rules
 
 1. **TypeScript strict** — no `any`, no unchecked non-null assertions.

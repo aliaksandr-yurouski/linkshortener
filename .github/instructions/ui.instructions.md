@@ -1,3 +1,7 @@
+---
+description: This file describes the UI component rules for the project.
+---
+
 # UI Components
 
 ## Rules
